@@ -1,5 +1,15 @@
 package person;
 
+import com.github.javafaker.Faker;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+import javax.persistence.*;
+import java.time.LocalDate;
+import java.time.ZoneId;
+
 @NoArgsConstructor
 @AllArgsConstructor
 @Data
@@ -7,9 +17,9 @@ package person;
 @Entity
 public class Person {
 
-    public static enum  Gender {
+    public static enum Gender {
         FEMALE, MALE;
-    }
+    };
 
     @Id
     @GeneratedValue
@@ -30,5 +40,7 @@ public class Person {
     private String email;
 
     private String profession;
+
+
 
 }
